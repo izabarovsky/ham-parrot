@@ -1,0 +1,62 @@
+#!/usr/bin/env php
+<?php
+pcntl_async_signals(true);
+
+use Ballen\Clip\Utilities\CommandRouter;
+use Ballen\Clip\Exceptions\CommandNotFoundException;
+use Ballen\Pirrot\Commands\ArchiveCommand;
+use Ballen\Pirrot\Commands\IdentCommand;
+use Ballen\Pirrot\Commands\SetAdminPwdCommand;
+use Ballen\Pirrot\Commands\TripwireCommand;
+use Ballen\Pirrot\Commands\VersionCommand;
+use Ballen\Pirrot\Commands\VoiceCommand;
+use Ballen\Pirrot\Commands\UpdateCommand;
+use Ballen\Pirrot\Commands\HelpCommand;
+use Ballen\Pirrot\Commands\TerminateCommand;
+use Ballen\Pirrot\Commands\WebCommand;
+use Ballen\Pirrot\Commands\PurgeCommand;
+use Ballen\Pirrot\Commands\AlarmCommand;
+use Ballen\Pirrot\Commands\ClockCommand;
+
+// Set the current directory of the CLI script.
+$bindir = dirname(__FILE__);
+
+// Initiate the Composer autoloader.
+require_once $bindir . '/vendor/autoload.php';
+
+$app = new CommandRouter($argv);
+
+// Demonised commands
+$app->add('ident', IdentCommand::class);
+$app->add('voice', VoiceCommand::class);
+$app->add('web', WebCommand::class);
+
+// User CLI commands
+$app->add('update', UpdateCommand::class);
+$app->add('help', HelpCommand::class);
+$app->add('version', VersionCommand::class);
+$app->add('setwebpwd', SetAdminPwdCommand::class);
+$app->add('alarm', AlarmCommand::class);
+$app->add('clock', ClockCommand::class);
+
+// System/BackgroundApp commands
+$app->add('cleanup', TerminateCommand::class);
+$app->add('tripwire', TripwireCommand::class);
+$app->add('archive', ArchiveCommand::class);
+
+$app->add('purge', PurgeCommand::class);
+
+// Register process signal handlers
+pcntl_signal(SIGINT, function ($signal) use ($app) {
+    $app->dispatch('cleanup');
+});
+pcntl_signal(SIGTERM, function ($signal) use ($app) {
+    $app->dispatch('cleanup');
+});
+
+// Boot the application/daemon
+try {
+    $app->dispatch();
+} catch (CommandNotFoundException $exception) {
+    $app->dispatch('help');
+}
