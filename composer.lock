@@ -1,0 +1,235 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "00fc0703c895a75f3e04822819c14d86",
+    "packages": [
+        {
+            "name": "ballen/clip",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/allebb/clip.git",
+                "reference": "9cb01ac8c0f257c0536548b012d4c6679807ad62"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/allebb/clip/zipball/9cb01ac8c0f257c0536548b012d4c6679807ad62",
+                "reference": "9cb01ac8c0f257c0536548b012d4c6679807ad62",
+                "shasum": ""
+            },
+            "require": {
+                "ballen/collection": "^1.0",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.3.*"
+            },
+            "suggest": {
+                "ext-posix": "Enables execution as super user (root) checking."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ballen\\Clip\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bobby Allen",
+                    "email": "ballen@bobbyallen.me",
+                    "homepage": "http://bobbyallen.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A package for speeding up development of PHP console (CLI) applications.",
+            "keywords": [
+                "cli",
+                "command",
+                "commands",
+                "console"
+            ],
+            "support": {
+                "email": "ballen@bobbyallen.me",
+                "issues": "https://github.com/bobsta63/clip/issues",
+                "source": "https://github.com/allebb/clip/tree/2.2.0"
+            },
+            "time": "2016-02-28T16:12:02+00:00"
+        },
+        {
+            "name": "ballen/collection",
+            "version": "1.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/allebb/collection.git",
+                "reference": "426a67238150f84b161123d0fe03e88acc83a22a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/allebb/collection/zipball/426a67238150f84b161123d0fe03e88acc83a22a",
+                "reference": "426a67238150f84b161123d0fe03e88acc83a22a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ballen\\Collection\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bobby Allen",
+                    "email": "ballen@bobbyallen.me",
+                    "homepage": "http://bobbyallen.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Collection library which provides OOP replacement for the traditional array data structure.",
+            "keywords": [
+                "array",
+                "collection",
+                "list"
+            ],
+            "support": {
+                "issues": "https://github.com/allebb/collection/issues",
+                "source": "https://github.com/allebb/collection/tree/master"
+            },
+            "time": "2020-01-30T10:27:22+00:00"
+        },
+        {
+            "name": "ballen/executioner",
+            "version": "3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/allebb/executioner.git",
+                "reference": "2d3cbc3b402f4dcc7cd1abcab1f3d2e09451abe8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/allebb/executioner/zipball/2d3cbc3b402f4dcc7cd1abcab1f3d2e09451abe8",
+                "reference": "2d3cbc3b402f4dcc7cd1abcab1f3d2e09451abe8",
+                "shasum": ""
+            },
+            "require": {
+                "ballen/collection": "^1.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ballen\\Executioner\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bobby Allen",
+                    "email": "ballen@bobbyallen.me",
+                    "homepage": "http://bobbyallen.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Executioner is a PHP library for executing system processes and applications with the ability to pass extra arguments and read CLI output results.",
+            "keywords": [
+                "cli",
+                "exec",
+                "execute",
+                "execution",
+                "passthru",
+                "process",
+                "run"
+            ],
+            "support": {
+                "issues": "https://github.com/allebb/executioner/issues",
+                "source": "https://github.com/allebb/executioner/tree/v3.0.x"
+            },
+            "time": "2018-03-24T18:05:53+00:00"
+        },
+        {
+            "name": "ballen/gpio",
+            "version": "1.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/allebb/gpio.git",
+                "reference": "a21add87e860e8b727f476ff02b40839d53edab5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/allebb/gpio/zipball/a21add87e860e8b727f476ff02b40839d53edab5",
+                "reference": "a21add87e860e8b727f476ff02b40839d53edab5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ballen\\GPIO\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Bobby Allen",
+                    "email": "ballen@bobbyallen.me",
+                    "homepage": "http://bobbyallen.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A RaspberryPi GPIO library written in PHP.",
+            "keywords": [
+                "GPIO",
+                "RaspberryPi",
+                "io",
+                "rpi"
+            ],
+            "support": {
+                "issues": "https://github.com/allebb/gpio/issues",
+                "source": "https://github.com/allebb/gpio/tree/1.0.8"
+            },
+            "time": "2020-01-31T08:04:42+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=7.3",
+        "ext-pcntl": "*",
+        "ext-json": "*",
+        "ext-curl": "*",
+        "ext-ftp": "*",
+        "ext-sqlite3": "*"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}

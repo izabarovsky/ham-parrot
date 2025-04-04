@@ -1,0 +1,48 @@
+{
+  "name": "ballen/pirrot",
+  "description": "A UHF/VHF radio repeater controller for RaspberryPi",
+  "type": "project",
+  "keywords": [
+    "repeater",
+    "simplex",
+    "ham",
+    "radio",
+    "parrot",
+    "pirrot",
+    "ham",
+    "vhf",
+    "uhf"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Bobby Allen",
+      "email": "ballen@bobbyallen.me",
+      "homepage": "https://bobbyallen.me",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "ballen@bobbyallen.me",
+    "docs": "https://pirrot.bobbyallen.me",
+    "source": "https://github.com/allebb/pirrot",
+    "issues": "https://github.com/allebb/pirrot/issues",
+    "wiki": "https://github.com/allebb/pirrot/wiki"
+  },
+  "require": {
+    "php": ">=7.3",
+    "ballen/clip": "^2.0",
+    "ballen/executioner": "^3.0",
+    "ballen/gpio": "^1.0",
+    "ext-pcntl": "*",
+    "ext-json": "*",
+    "ext-curl": "*",
+    "ext-ftp": "*",
+    "ext-sqlite3": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ballen\\Pirrot\\": "app/"
+    }
+  }
+}
